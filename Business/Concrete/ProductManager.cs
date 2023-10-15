@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,15 +11,19 @@ namespace Business.Concrete
 {
     public class ProductManager : IProductService
     {
-        //EfProductDal Kullanacam
+        private IProductDal _productDal;
+        public ProductManager(IProductDal productDal)
+        {
+            _productDal = productDal;
+        }
         public List<Product> GetAll()
         {
-            throw new NotImplementedException();
+            return _productDal.Getlist();
         }
 
         public List<Product> GetByCategory(int categoryId)
         {
-            throw new NotImplementedException();
+            return _productDal.Getlist(p=>p.CategoryId==categoryId);
         }
     }
 }
