@@ -1,0 +1,18 @@
+﻿@model MvcWebUI.Models.ProdcutListViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+<p class="alert alert-danger">Product List</p>
+<table class="table table-hover">
+    @foreach (var product in Model.Product)
+    {
+        <tr>
+            <td>@product.ProductID</td>
+            <td>@product.ProductName</td>
+            <td>@product.QuantityPerUnit</td>
+            <td>@product.UnitPrice</td>
+            <td>@product.UnitsInStock</td>
+        </tr>
+    }
+</table>
+

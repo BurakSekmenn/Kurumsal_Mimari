@@ -14,7 +14,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;initial catalog=Northwind;integrated security=true");
         }
-        public DbSet<Product> Prdoucts { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet <Category> Categories { get; set; }
     }
 }

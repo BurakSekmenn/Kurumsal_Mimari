@@ -23,7 +23,7 @@ namespace Business.Concrete
 
         public List<Product> GetByCategory(int categoryId)
         {
-            return _productDal.Getlist(p=>p.CategoryId==categoryId);
+            return _productDal.Getlist(p=>p.CategoryID==categoryId);
         }
     }
 }
