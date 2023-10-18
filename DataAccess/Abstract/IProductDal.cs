@@ -16,4 +16,8 @@ namespace DataAccess.Abstract
         // Silme
         // Güncelleme
     }
+    //public interface IPorductDal : Product
+    //{
+     // aslında burada ekleme güncelleme vb yapılır implet edilib ama biz Bir tan IEntityRepository oluşturduk burada hıızlıca yapmak çiin
+    //}
 }

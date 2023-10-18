@@ -1,0 +1,14 @@
+﻿
+
+@model MvcWebUI.Models.CategoryListViewModel
+
+<div>
+    @foreach (var category in Model.Categories)
+    {
+        <a href="/product/index?category=@category.CategoryID" class="list-group-item"> @category.CategoryName</a>
+    }
+</div>
+   
+
+
+
