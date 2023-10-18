@@ -3,9 +3,15 @@
 @model MvcWebUI.Models.CategoryListViewModel
 
 <div>
+    <a href="/product/index" class="list-group-item">Tüm Ürünler</a>
     @foreach (var category in Model.Categories)
     {
-        <a href="/product/index?category=@category.CategoryID" class="list-group-item"> @category.CategoryName</a>
+        var css = "list-group-item";
+        if (category.CategoryID == Model.CurrentCategory)
+        {
+            css += " active";
+        }
+        <a href="/product/index?category=@category.CategoryID" class="@css"> @category.CategoryName</a>
     }
 </div>
    

@@ -13,11 +13,12 @@ namespace MvcWebUI.Controllers
         {
             _productService = productService;
         }
-        public IActionResult Index()
+        public IActionResult Index(int category)
         {
+
             var model = new ProdcutListViewModel
             {
-                Product = _productService.GetAll()
+                Product = category > 0 ? _productService.GetByCategory(category) : _productService.GetAll()
             };
             return View(model);
         }
